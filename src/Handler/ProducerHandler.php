@@ -66,6 +66,6 @@ class ProducerHandler extends AbstractHandler
                 throw new InvalidProducerException("Target({$this->target}) error");
         }
 
-        Container::registerProducer($key, $producer);
+        Container::registerProducer($key, $producer, $attribute->getScope());
     }
 }
